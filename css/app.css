@@ -1,0 +1,97 @@
+:root {
+    --txt-color: #fff;
+    --timer-box-bg: #1c2451;
+    --timer-box-txt-bg: #085391;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: var(--txt-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.fireworks-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: bottom left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+}
+
+.content-wrapper {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer {
+    text-align: center;
+    position: relative;
+}
+
+#counter{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timer > span {
+    text-align: center;
+    text-shadow: 4px 2px #111;
+    font-size: 7rem;
+    font-weight: 500;
+}
+
+#counter{
+    transform: translateX(-50%);
+}
+
+.none{
+    display: none;
+}
+
+.newyear{
+    opacity: 0;
+}
+
+.start > .newyear{
+    opacity: 1;
+    transition: all 1s linear;
+}
+
+.start #counter{
+    display: none;
+}
+
+#audio-container{
+    /* opacity: 0; */
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 40%;
+    }
+}
